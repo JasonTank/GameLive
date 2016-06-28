@@ -10,7 +10,7 @@
 
 @implementation YXLiveModel
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"link_object":[YXLiveLinkObjectModel class]};
+    return @{@"data":[YXLiveLinkObjectModel class]};
 }
 @end
 
@@ -27,7 +27,7 @@
     return @{@"ID":@"id"};
 }
 +(NSDictionary<NSString *,id> *)modelContainerPropertyGenericClass{
-    return @{@"link_object":[YXLiveLinkObjectModel class]};
+    return @{@"data":[YXLiveLinkObjectModel class]};
 }
 
 @end

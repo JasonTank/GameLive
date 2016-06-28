@@ -17,6 +17,12 @@
 
 #define kClassPath @"/json/categories/list.json"
 
+#define kVideoPath @"http://hls.quanmin.tv/live/%@/palylist.m3u8"
+
+#define kStreamRoomPath @"/json/categories/%@/list.json"
+#define kStreamRoomPathOne @"/json/categories/%@/list_%ld.json"
+
+
 #endif /* RequestPaths_h */
 
 

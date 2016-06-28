@@ -17,4 +17,5 @@
 
 +(id)getClassPathCompletionHandler:(void(^)(id model, NSError *error))completionHandler;
 
++(id)getStreamRoomGameName:(NSString *)gameName page:(NSInteger)page completionHandler:(void(^)(id model, NSError *error))compleitonHandler;
 @end

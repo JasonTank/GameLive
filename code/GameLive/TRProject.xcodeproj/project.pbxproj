@@ -31,6 +31,7 @@
 		A7AF519E1D1FC32F003CE83C /* YXClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF519D1D1FC32F003CE83C /* YXClassViewController.m */; };
 		A7AF51A11D1FCBD6003CE83C /* YXStreamRoomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF51A01D1FCBD6003CE83C /* YXStreamRoomViewModel.m */; };
 		A7AF51A41D1FD5D2003CE83C /* YXStreamRoomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF51A31D1FD5D2003CE83C /* YXStreamRoomCell.m */; };
+		A7AF51A71D201C81003CE83C /* YXStreamRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF51A61D201C81003CE83C /* YXStreamRoomViewController.m */; };
 		A7C5538B1D1C12FD00B34E1B /* YXLiveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7C5538A1D1C12FD00B34E1B /* YXLiveModel.m */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,8 @@
 		A7AF51A01D1FCBD6003CE83C /* YXStreamRoomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXStreamRoomViewModel.m; sourceTree = "<group>"; };
 		A7AF51A21D1FD5D2003CE83C /* YXStreamRoomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXStreamRoomCell.h; sourceTree = "<group>"; };
 		A7AF51A31D1FD5D2003CE83C /* YXStreamRoomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXStreamRoomCell.m; sourceTree = "<group>"; };
+		A7AF51A51D201C81003CE83C /* YXStreamRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXStreamRoomViewController.h; sourceTree = "<group>"; };
+		A7AF51A61D201C81003CE83C /* YXStreamRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXStreamRoomViewController.m; sourceTree = "<group>"; };
 		A7C553891D1C12FD00B34E1B /* YXLiveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLiveModel.h; sourceTree = "<group>"; };
 		A7C5538A1D1C12FD00B34E1B /* YXLiveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLiveModel.m; sourceTree = "<group>"; };
 		B6D5968AB9B9E44E939066EA /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +203,8 @@
 				38A1A3351C74526C007EEEB7 /* ViewController.m */,
 				A7AF519C1D1FC32F003CE83C /* YXClassViewController.h */,
 				A7AF519D1D1FC32F003CE83C /* YXClassViewController.m */,
+				A7AF51A51D201C81003CE83C /* YXStreamRoomViewController.h */,
+				A7AF51A61D201C81003CE83C /* YXStreamRoomViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -414,6 +419,7 @@
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
 				A7C5538B1D1C12FD00B34E1B /* YXLiveModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				A7AF51A71D201C81003CE83C /* YXStreamRoomViewController.m in Sources */,
 				A7AF51951D1FBC47003CE83C /* YXClassViewModel.m in Sources */,
 				A7AF51A41D1FD5D2003CE83C /* YXStreamRoomCell.m in Sources */,
 				A7AF519B1D1FC074003CE83C /* YXClassCell.m in Sources */,

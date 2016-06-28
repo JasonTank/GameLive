@@ -35,7 +35,7 @@
     }];
 }
 
-
+//
 +(id)getClassPathCompletionHandler:(void (^)(id, NSError *))completionHandler{
 
     return [self GET:kClassPath parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
@@ -46,6 +46,17 @@
         }
     }];
 }
-
+//
++(id)getStreamRoomGameName:(NSString *)gameName page:(NSInteger)page completionHandler:(void (^)(id, NSError *))compleitonHandler{
+    NSString *path = page?[NSString stringWithFormat:kStreamRoomPathOne,gameName,page]:[NSString stringWithFormat:kStreamRoomPath,gameName];
+    
+    return [self GET:path parameters:nil progress:nil completionHandler:^(id jsonObject, NSError *error) {
+        if (error) {
+            DDLogError(@"%@", error);
+        }else{
+            !compleitonHandler?:compleitonHandler([YXLiveModel parseJSON:jsonObject], error);
+        }
+    }];
+}
 
 @end

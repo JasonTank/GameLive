@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "YXClassCell.h"
 #import "YXClassViewModel.h"
+#import "YXStreamRoomViewController.h"
 @interface YXClassViewController : UICollectionViewController
 
 @end

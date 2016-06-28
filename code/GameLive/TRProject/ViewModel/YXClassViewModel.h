@@ -17,4 +17,5 @@
 - (NSString *)titleForIndex:(NSInteger)index;
 - (NSURL *)iconURLForIndex:(NSInteger)index;
 - (NSString *)gameNameForIndex:(NSInteger)index;
+
 @end

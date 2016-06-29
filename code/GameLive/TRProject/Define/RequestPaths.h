@@ -13,7 +13,7 @@
 #define kLivePath @"/json/play/list_%ld.json"
 #define kLivePathOne @"/json/play/list.json"
 
-#define kHomePath @"/json/page/app-index/info.json"
+#define kHomePath @"/json/page/appv2-index/info.json"
 
 #define kClassPath @"/json/categories/list.json"
 

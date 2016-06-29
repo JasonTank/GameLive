@@ -23,6 +23,7 @@
 		38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F71C8C225D00FCBF96 /* Main.storyboard */; };
 		38ADA3B81C626AAF0093502F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3B71C626AAF0093502F /* main.m */; };
 		38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3BA1C626AAF0093502F /* AppDelegate.m */; };
+		85F123541D236F8F0048F93B /* YXIndexModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F123531D236F8F0048F93B /* YXIndexModel.m */; };
 		A7AF51891D1C13EC003CE83C /* YXNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF51881D1C13EC003CE83C /* YXNetManager.m */; };
 		A7AF518C1D1D3C76003CE83C /* YXHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF518B1D1D3C76003CE83C /* YXHomeModel.m */; };
 		A7AF518F1D1FB502003CE83C /* YXClassModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AF518E1D1FB502003CE83C /* YXClassModel.m */; };
@@ -65,6 +66,8 @@
 		38ADA3B91C626AAF0093502F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		38ADA3BA1C626AAF0093502F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A8F54CE0222A3F4E0D59483 /* libPods-TRProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F123521D236F8F0048F93B /* YXIndexModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXIndexModel.h; sourceTree = "<group>"; };
+		85F123531D236F8F0048F93B /* YXIndexModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXIndexModel.m; sourceTree = "<group>"; };
 		A7AF51871D1C13EC003CE83C /* YXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetManager.h; sourceTree = "<group>"; };
 		A7AF51881D1C13EC003CE83C /* YXNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNetManager.m; sourceTree = "<group>"; };
 		A7AF518A1D1D3C76003CE83C /* YXHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXHomeModel.h; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				A7AF518B1D1D3C76003CE83C /* YXHomeModel.m */,
 				A7AF518D1D1FB502003CE83C /* YXClassModel.h */,
 				A7AF518E1D1FB502003CE83C /* YXClassModel.m */,
+				85F123521D236F8F0048F93B /* YXIndexModel.h */,
+				85F123531D236F8F0048F93B /* YXIndexModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -419,6 +424,7 @@
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
 				A7C5538B1D1C12FD00B34E1B /* YXLiveModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
+				85F123541D236F8F0048F93B /* YXIndexModel.m in Sources */,
 				A7AF51A71D201C81003CE83C /* YXStreamRoomViewController.m in Sources */,
 				A7AF51951D1FBC47003CE83C /* YXClassViewModel.m in Sources */,
 				A7AF51A41D1FD5D2003CE83C /* YXStreamRoomCell.m in Sources */,

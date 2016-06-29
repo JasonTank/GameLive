@@ -21,6 +21,8 @@
         NSLog(@"");
     }];
     
+    NSString *md5str = @"123".md5String;
+    NSLog(@"%@", md5str);
     
     UITabBarController *tbC = [[UITabBarController alloc]init];
     /****************************************************************************************/

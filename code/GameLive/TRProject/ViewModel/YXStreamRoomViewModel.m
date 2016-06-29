@@ -33,7 +33,14 @@
     return [self modelForRow:row].thumb.yx_URL;
 }
 - (NSString *)spectaterForRow:(NSInteger)row{
-    return [self modelForRow:row].view;
+    NSString *spectater = [self modelForRow:row].view;
+    
+    if (spectater.doubleValue >= 10000) {
+        return [NSString stringWithFormat:@"%.2lf万", spectater.doubleValue / 10000.0];
+    }else{
+    
+        return [self modelForRow:row].view;
+    }
 }
 -(NSString *)titleForRow:(NSInteger)row{
     return [self modelForRow:row].title;
@@ -93,7 +100,7 @@
 
 - (NSMutableArray<YXLiveLinkObjectModel *> *)dataList{
     if (!_dataList) {
-        _dataList = [NSMutableArray<YXLiveLinkObjectModel *> init];
+        _dataList = [[NSMutableArray<YXLiveLinkObjectModel *> alloc]init];
     }
     return _dataList;
 }

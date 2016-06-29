@@ -31,7 +31,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionView.backgroundColor = [UIColor whiteColor];
+    self.collectionView.backgroundColor = [UIColor colorWithRed:238/255.0 green:238/255.0 blue:238/255.0 alpha:1];
     [self.collectionView registerClass:[YXStreamRoomCell class] forCellWithReuseIdentifier:reuseIdentifier];
     if (self.gameName == nil) {
         self.navigationItem.title = @"直播";
@@ -39,40 +39,36 @@ static NSString * const reuseIdentifier = @"Cell";
         self.navigationItem.title = self.gameName;
     }
     
-    [self.streamRoomVM getDataWithRequestMode:VMRequestModeRefresh completionHandler:^(NSError *error) {
-        if (error) {
-            DDLogError(@"%@", error);
-        }else{
-            [self.collectionView reloadData];
-        }
-    }];
     
-//    
-//    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-//        [self.streamRoomVM getDataWithRequestMode:0 completionHandler:^(NSError *error) {
-//            [self.collectionView.mj_header endRefreshing];
-//            if (error) {
-//                DDLogError(@"%@", error);
-//            }else{
-//                [self.collectionView reloadData];
-//                if (self.streamRoomVM.hasMore) {
-//                    [self.collectionView.mj_footer endRefreshing];
-//                }else{
-//                    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
-//                }
-//            }
-//        }];
-//
-//        
-//    }];
-//    [self.collectionView.mj_header beginRefreshing];
-//    
-//
-//    self.collectionView.mj_footer = [MJRefreshAutoStateFooter footerWithRefreshingBlock:^{
-//        [self.streamRoomVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
-//            [self.collectionView.mj_footer endRefreshing];
-//        }];
-//    }];
+    
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [self.streamRoomVM getDataWithRequestMode:VMRequestModeRefresh completionHandler:^(NSError *error) {
+            
+        }];
+        [self.streamRoomVM getDataWithRequestMode:0 completionHandler:^(NSError *error) {
+            [self.collectionView.mj_header endRefreshing];
+            if (error) {
+                DDLogError(@"%@", error);
+            }else{
+                [self.collectionView reloadData];
+                if (self.streamRoomVM.hasMore) {
+                    [self.collectionView.mj_footer endRefreshing];
+                }else{
+                    [self.collectionView.mj_footer endRefreshingWithNoMoreData];
+                }
+            }
+        }];
+
+        
+    }];
+    [self.collectionView.mj_header beginRefreshing];
+    
+
+    self.collectionView.mj_footer = [MJRefreshAutoStateFooter footerWithRefreshingBlock:^{
+        [self.streamRoomVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {
+            [self.collectionView.mj_footer endRefreshing];
+        }];
+    }];
     
 }
 
@@ -89,10 +85,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YXStreamRoomCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
     [cell.coverIV sd_setImageWithURL:[self.streamRoomVM coverURLForRow:indexPath.row]];
     [cell.iconIV sd_setImageWithURL:[self.streamRoomVM iconURLForRow:indexPath.row]];
     cell.titleLabel.text = [self.streamRoomVM titleForRow:indexPath.row];
-    cell.nameLabel.text = [self.streamRoomVM titleForRow:indexPath.row];
+    cell.nameLabel.text = [self.streamRoomVM nickForRow:indexPath.row];
     cell.spectater.text = [self.streamRoomVM spectaterForRow:indexPath.row];
     
     return cell;
@@ -108,7 +105,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 -(YXStreamRoomViewModel *)streamRoomVM{
-    if (_streamRoomVM) {
+    if (!_streamRoomVM) {
         _streamRoomVM = [[YXStreamRoomViewModel alloc]initWithGameName:self.gameName];
     }
     return _streamRoomVM;

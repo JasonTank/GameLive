@@ -42,7 +42,7 @@
     streamLayout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
     streamLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
     CGFloat width2 = lround(([UIScreen mainScreen].bounds.size.width - 30) / 2) - 1;
-    CGFloat height2 = width * 100 / 156 + 40;
+    CGFloat height2 = width2 * 100 / 156 + 40;
     streamLayout.itemSize = CGSizeMake(width2, height2);
     
     YXStreamRoomViewController *streamRoomVC = [[YXStreamRoomViewController alloc]initWithCollectionViewLayout:streamLayout];

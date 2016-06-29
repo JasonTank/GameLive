@@ -22,7 +22,7 @@
         [self.contentView addSubview:_coverIV];
         [_coverIV mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.right.left.equalTo(0);
-            make.bottom.equalTo(_coverIV.mas_top);
+            make.height.equalTo(120);
         }];
     }
     return _coverIV;
@@ -31,9 +31,10 @@
 -(UILabel *)spectater{
     if (!_spectater) {
         _spectater = [UILabel new];
-        [_iconIV addSubview:_spectater];
+        [self.coverIV addSubview:_spectater];
         [_spectater mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.bottom.equalTo(3);
+            make.left.equalTo(3);
+            make.bottom.equalTo(-3);
         }];
         _spectater.font = [UIFont systemFontOfSize:12];
         _spectater.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.22];
@@ -42,12 +43,17 @@
 }
 //3 2
 -(UIImageView *)iconIV{
-    if (!_coverIV) {
+    if (!_iconIV) {
         _iconIV = [UIImageView new];
-        [self.contentView addSubview: _coverIV];
+        [self.contentView addSubview: _iconIV];
         [_iconIV mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.bottom.equalTo(3);
+            make.height.equalTo(35);
+            make.width.equalTo(35);
+            make.left.equalTo(3);
+            make.top.equalTo(self.coverIV.mas_bottom).equalTo(3);
         }];
+        _iconIV.clipsToBounds = YES;
+        _iconIV.layer.cornerRadius = 20;
     }
     return _iconIV;
 }
@@ -57,10 +63,8 @@
         _nameLabel = [UILabel new];
         [self.contentView addSubview:_nameLabel];
         [_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_iconIV.mas_right);
-            make.bottom.equalTo(_titleLabel.mas_top);
-            make.right.equalTo(0);
-            make.height.equalTo(3);
+            make.top.equalTo(self.coverIV.mas_bottom).equalTo(3);
+            make.left.equalTo(self.iconIV.mas_right).equalTo(3);
         }];
         _titleLabel.font = [UIFont systemFontOfSize:14];
     }
@@ -71,9 +75,9 @@
         _titleLabel = [UILabel new];
         [self.contentView addSubview:_titleLabel];
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(_iconIV.mas_right);
-            make.bottom.right.equalTo(0);
-            make.height.equalTo(2);
+            make.top.equalTo(self.nameLabel.mas_bottom).equalTo(3);
+            make.left.equalTo(self.iconIV.mas_right).equalTo(3);
+            make.right.equalTo(0);
         }];
         _titleLabel.font = [UIFont systemFontOfSize:12];
     }
